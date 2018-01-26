@@ -7,233 +7,204 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<style type="text/css">
-    .pics 
-    { 
+    <!-- <script type="text/javascript" src="assets/javascript/game.js"></script> -->
+    <style type="text/css">
+    .pics {
         width: 130px;
         height: 130px;
     }
-    
-
-</style>
+    </style>
 </head>
 
 <body>
 
-
-<div class="container">
-<div class = "row">
-<div id="compNum" class = "panel panel-default">
-    <div id="header" class = "panel-body">
-        <h1>Crystal Collector</h1>
-    </div>
-</div>
-</div>
-</div>
-<div class="container">
-<div class ="row">
-    <div class="col-lg-7">
-        <div class = "panel panel-default"><p>You will be given a random number at the beggining of the game. There are 4 chrystals bellow. By clicking on a crystal you will add a specific amount of points to your total score. You win the game by matching your total score to random number. You loose the game by going above the random number. The value of each crystal is hidden from you until you click on it. Each time the game starts it will change the values behind the pictures.</p></div>
-    </div>
-</div>
-    
-
-    <div class="row">
-        <div class="col-lg-5">
-        <div id="ComputerNumber"
-        class ="panel panel-default"><h3>Random Number:</h3></div>
-</div>
-    <!-- </div> -->
-    <div class="col-lg-5">
-        <div class="panel panel-default">
-            <p>Wins: <span class="win-counter"></span></p>
-            <p>Losses: <span class="loss-counter"></span></p>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-7">
-<div class="panel panel-default">
-<div id="pictures" class="panel-body">
-<div class="row">
-<div class="col-md-2">
-<img class="pics" id="pic1" src="assets/images/img1.jpg">
-</div>
-<div class="col-md-1"></div>
-<div class="col-md-2">
-<img class="pics" id="pic2" src="assets/images/img2.jpg">
-</div>
-<div class="col-md-1"></div>
-<div class="col-md-2">
-    <img class="pics" id="pic3" src="assets/images/img3.jpg">
-</div>
-<div class="col-md-1"></div>
-<div class="col-md-2">
-    <img class="pics" id="pic4" src="assets/images/img4.jpg">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="row">
-    <div class="col-md-5"></div>
-    <div class="col-md-3">
-        <div class="panel panel-default">
-            <div id="score-indicator" class="panel-body">
-                
-
+    <body background="assets/images/background.jpg">
+        <div class="container">
+            <div class="row">
+                <div id="compNum" class="panel panel-default">
+                    <div id="header" class="panel-body">
+                        <h1>Picture Mathematics</h1>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-5"></div>
-    <div class="col-md-3">
-
-        <div class="panel panel-default">
-            <div id="score" class="panel-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="panel panel-default">
+                        <p>You will be given a random number at the beggining of the game. There are 4 chrystals bellow. By clicking on a crystal you will add a specific amount of points to your total score. You win the game by matching your total score to random number. You loose the game by going above the random number. The value of each crystal is hidden from you until you click on it. Each time the game starts it will change the values behind the pictures.</p>
+                    </div>
+                </div>
             </div>
-
+            <div class="row">
+                <div class="col-lg-5">
+                    <div id="ComputerNumber" class="panel panel-default">
+                        <h3>Random Number:</h3></div>
+                </div>
+                <!-- </div> -->
+                <div class="col-lg-5">
+                    <div id = "stats" class="panel panel-default">
+                       
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-7">
+                    <div class="panel panel-default">
+                        <div id="pictures" class="panel-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img class="pics" id="pic1" src="assets/images/img1.jpg">
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <img class="pics" id="pic2" src="assets/images/img2.jpg">
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <img class="pics" id="pic3" src="assets/images/img3.jpg">
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <img class="pics" id="pic4" src="assets/images/img4.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div id="score-indicator" class="panel-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div id="score" class="panel-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-</div>
-</div>
-
-   
-
-
-    
-   
-
-
-
-
-<!-- <div class ="row">
+        <!-- <div class ="row">
     <div class="col-lg-3"><img id="img1" id="img" src = "assets/images/img1.jpg"></div>
     <div class="col-lg-3"><img id="img2" id="img" src = "assets/images/img2.jpg"></div>
     <div class="col-lg-3"><img id="img3" id="img" src = "assets/images/img3.jpg"></div>
     <div class="col-lg-3"><img id="img4" id="img" src = "assets/images/img4.jpg"></div>
 </div> -->
-<!-- <div id="wins"></div>
+        <!-- <div id="wins"></div>
 <div id="losses"></div> -->
+<script type="text/javascript">
+        var wins = 0;
+        var losses = 0;
+        var myScore = 0;
+        var targetNumber;
+        var pic1 = 0;
+        var pic2 = 0;
+        var pic3 = 0;
+        var pic4 = 0;
+        var min;
+        var max;
 
-
-
-
-
-
-
-
-
-    <script type="text/javascript">
-     
-     var wins = 0;
-     var losses = 0;
-     var myScore = 0;
-     var randomNumber 
-     var pic1 = 0;
-     var pic2 = 0;
-     var pic3 = 0;
-     var pic4 = 0;
-     var min
-     var max 
-
-    function getANumber(min, max) {
-        randomNumber =  Math.floor(Math.random() * (max - min + 1) + min);
-        console.log(randomNumber);
-}
-getANumber(19,120);
-
-    function showNumber(){
-        $("#ComputerNumber").html(randomNumber);
-    }
-
-    showNumber();
-
-
-        function showScore() {
-         
-         var number =  Math.floor(Math.random() * (12 - 1 + 1) + 1);
-         //console.log(number);
-         return number;    
+        function start(){
+            generateTargetNumber();
+            appendAllStats();
+            assignPicValue();
+            console.log("inside start")
+           
         }
+        start()
 
-        showScore();
-
-
-        function refreshPics(){
-
-        pic1 = showScore();
-        pic2 = showScore();
-        pic3 = showScore();
-        pic4 = showScore();
-
-           }
-
-           function updating(){
-
-            $("#score").html(myScore);
-           }
+        function generateTargetNumber() {
+            targetNumber = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+        }
         
 
-        refreshPics();
+    
+
+        function appendAllStats(){
+            var myDiv = "<div><p>Wins: "+ wins + "</p><p>Losses: " + losses +"</p></div>"
+            $("#ComputerNumber").html("Computer Number: " + targetNumber);
+            $("#stats").html(myDiv)
+            $("#score").html(myScore);
+        }
+        
+        function generateRandomPicScore() {
+            //generate Ramndom number between 1 and 12
+            var randomNumber = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+            //console.log(number);
+            return randomNumber;
+        }
+
+        function assignPicValue() {
+
+            pic1 = generateRandomPicScore();
+            pic2 = generateRandomPicScore();
+            pic3 = generateRandomPicScore();
+            pic4 = generateRandomPicScore();
+
+        }
 
 
-        $("#pic1").click(function(){
+        function checkScoreStatus() {
+            if (myScore === targetNumber) {
+                wins++;
+                resetGame()
+                $(".win-counter").html(wins);
+
+            } else if (myScore > targetNumber) {
+                losses++;
+                resetGame()
+                $(".loss-counter").html(losses);
+
+            }
+        }
+        function resetGame(){
+                myScore =0;
+                generateTargetNumber()
+                assignPicValue()
+                appendAllStats()
+        }
+        
+
+
+        $("#pic1").click(function() {
             myScore += pic1;
             console.log(myScore);
-            updating();
+            checkScoreStatus()
+            appendAllStats()
         });
 
-        $("#pic2").click(function(){
+        $("#pic2").click(function() {
             myScore += pic2;
-            updating();
+            checkScoreStatus()
+            appendAllStats()
         });
 
-        $("#pic3").click(function(){
+        $("#pic3").click(function() {
             myScore += pic3;
-            updating();
+            checkScoreStatus()
+            appendAllStats()
         });
-        $("#pic4").click(function(){
+        $("#pic4").click(function() {
             myScore += pic4;
-            updating();
+            checkScoreStatus()
+            appendAllStats()
         });
 
 
-        function giveFinalResult() {
-        if (myScore === randomNumber) 
-        {
-            wins++;
-
-            $(".win-counter").html(wins);
-            
-        } 
-
-        else if(myScore > randomNumber){
-            losses++;
-            
-            $(".loss-counter").html(losses);
         
-         }
-        }
-        giveFinalResult();
-
-    </script>
-
-
-
-
-
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-
-
-</body>
+        
+        </script>
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    </body>
 
 </html>
